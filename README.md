@@ -20,15 +20,6 @@ A modern and efficient speech-to-text transcription web app built with **React**
 
 ---
 
-## 📸 Screenshots
-
-🔹 *Upload Audio & Record in Browser*  
-🔹 *View Transcriptions in Real-time*
-
-> Add screenshots here!
-
----
-
 ## 📦 Installation & Setup
 
 ### 1️⃣ Clone the Repository
