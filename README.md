@@ -41,7 +41,8 @@ $ cd SpeechToTextApp
 #### Backend
 ```sh
 $ cd backend
-$ npm install
+$ npm install -g nodemon  # Install nodemon globally if not installed
+$ nodemon server.js
 ```
 #### Frontend
 ```sh
@@ -94,4 +95,3 @@ $ npm run dev
 ## 📝 License
 
 This project is licensed under the **MIT License**.
-
