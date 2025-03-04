@@ -67,6 +67,7 @@ app.post("/upload", upload.single("audio"), async (req, res) => {
         punctuate: true,
         model: "nova-3",
         smart_format: true,
+        language: 'en-IN',
       }
     );
 
