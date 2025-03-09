@@ -102,5 +102,16 @@ app.get("/transcriptions", async (req, res) => {
   }
 });
 
+// Clear all transcriptions
+app.delete("/transcriptions", async (req, res) => {
+  try {
+    await Transcription.deleteMany({});
+    res.json({ message: "All transcriptions cleared successfully" });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
