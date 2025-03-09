@@ -13,7 +13,7 @@ function App() {
 
   // Fetch transcriptions on component mount
   useEffect(() => {
-    axios.get('https://speechtotextapp.onrender.com/transcriptions')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/transcriptions`)
       .then((res) => setTranscriptions(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -42,7 +42,7 @@ function App() {
     formData.append('audio', file);
 
     try {
-      const res = await axios.post('https://speechtotextapp.onrender.com/upload', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
